@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>California House Price Prediction</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- HERO SECTION -->
+    <div class="hero">
+
+        <!-- House Image -->
+        <div class="hero-image"></div>
+
+        <!-- Dark Overlay -->
+        <div class="overlay"></div>
+
+        <!-- Hero Content -->
+        <div class="hero-content">
+
+            <div class="house-icon">
+                🏠
+            </div>
+
+            <h1>
+                California <span>House Price</span>
+            </h1>
+
+            <h2>
+                AI-Powered House Price Prediction
+            </h2>
+
+            <p>
+                Enter the property details below to predict
+                the estimated house value in California.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- MAIN CONTAINER -->
+
+    <div class="container">
+
+        <div class="card">
+
+            <!-- FORM HEADER -->
+
+            <div class="form-header">
+
+                <div class="form-icon">
+                    📊
+                </div>
+
+                <div>
+                    <h2>Input Features</h2>
+
+                    <p>
+                        Fill in the values for each feature used by the model.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- FORM -->
+
+            <form action="/predict" method="POST">
+
+                <div class="form-grid">
+
+                    {% for column in columns %}
+
+                    <div class="input-group">
+
+                        <label for="{{ column }}">
+                            {{ column }}
+                        </label>
+
+                        <input
+                            type="number"
+                            step="any"
+                            name="{{ column }}"
+                            id="{{ column }}"
+                            placeholder="Enter {{ column }}"
+                            required
+                        >
+
+                    </div>
+
+                    {% endfor %}
+
+                </div>
+
+
+                <!-- BUTTON -->
+
+                <button type="submit">
+
+                    <span>✨</span>
+
+                    Predict House Price
+
+                </button>
+
+            </form>
+
+
+            <!-- RESULT -->
+
+            {% if prediction is defined %}
+
+            <div class="result">
+
+                <div class="result-title">
+                    📊 Prediction Result
+                </div>
+
+                <div class="price">
+                    $ {{ prediction }}
+                </div>
+
+                <p>
+                    Estimated House Value
+                </p>
+
+            </div>
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+
+    <footer>
+        California House Price Prediction • Machine Learning
+    </footer>
+
+</body>
+
+</html>

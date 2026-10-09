@@ -1,0 +1,496 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ============================= */
+/* BODY */
+/* ============================= */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #eef4fb;
+
+    min-height: 100vh;
+
+    color: #222;
+}
+
+
+/* ============================= */
+/* HERO SECTION */
+/* ============================= */
+
+.hero {
+
+    position: relative;
+
+    height: 430px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+/* HOUSE IMAGE */
+
+.hero-image {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image: url("house.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    transform: scale(1.02);
+}
+
+
+/* DARK OVERLAY */
+
+.overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.78),
+            rgba(0, 0, 0, 0.30)
+        );
+}
+
+
+/* HERO CONTENT */
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 900px;
+
+    max-width: 90%;
+
+    color: white;
+
+    text-align: left;
+}
+
+
+.house-icon {
+
+    font-size: 55px;
+
+    margin-bottom: 10px;
+}
+
+
+.hero-content h1 {
+
+    font-size: 55px;
+
+    font-weight: 800;
+
+    margin-bottom: 10px;
+
+    letter-spacing: -1px;
+}
+
+
+.hero-content h1 span {
+
+    color: #4da3ff;
+}
+
+
+.hero-content h2 {
+
+    font-size: 25px;
+
+    margin-bottom: 15px;
+}
+
+
+.hero-content p {
+
+    max-width: 600px;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+
+    color: #e7e7e7;
+}
+
+
+/* ============================= */
+/* MAIN CONTAINER */
+/* ============================= */
+
+.container {
+
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: -80px auto 40px;
+
+    position: relative;
+
+    z-index: 5;
+
+    padding: 0 20px;
+}
+
+
+/* ============================= */
+/* CARD */
+/* ============================= */
+
+.card {
+
+    background: white;
+
+    border-radius: 22px;
+
+    padding: 32px;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ============================= */
+/* FORM HEADER */
+/* ============================= */
+
+.form-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+
+.form-icon {
+
+    width: 55px;
+
+    height: 55px;
+
+    border-radius: 15px;
+
+    background: #eaf2ff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 25px;
+}
+
+
+.form-header h2 {
+
+    font-size: 25px;
+
+    margin-bottom: 5px;
+}
+
+
+.form-header p {
+
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+/* ============================= */
+/* FORM GRID */
+/* ============================= */
+
+.form-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+
+/* ============================= */
+/* INPUT GROUP */
+/* ============================= */
+
+.input-group {
+
+    background: #f8faff;
+
+    border: 1px solid #e4e9f2;
+
+    border-radius: 14px;
+
+    padding: 15px;
+
+    transition: 0.25s;
+}
+
+
+.input-group:hover {
+
+    border-color: #4d8dff;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 5px 15px rgba(50, 100, 200, 0.08);
+}
+
+
+.input-group label {
+
+    display: block;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    color: #333;
+
+    margin-bottom: 8px;
+}
+
+
+.input-group input {
+
+    width: 100%;
+
+    padding: 12px 13px;
+
+    border: 1px solid #d6dce8;
+
+    border-radius: 9px;
+
+    font-size: 15px;
+
+    background: white;
+
+    outline: none;
+
+    transition: 0.25s;
+}
+
+
+.input-group input:focus {
+
+    border-color: #4c8dff;
+
+    box-shadow:
+        0 0 0 3px rgba(76, 141, 255, 0.12);
+}
+
+
+/* ============================= */
+/* BUTTON */
+/* ============================= */
+
+button {
+
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 16px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #008cff,
+            #7b3ff2
+        );
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    box-shadow:
+        0 8px 20px rgba(65, 100, 230, 0.25);
+}
+
+
+button span {
+
+    margin-right: 8px;
+}
+
+
+button:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 25px rgba(65, 100, 230, 0.35);
+}
+
+
+/* ============================= */
+/* RESULT */
+/* ============================= */
+
+.result {
+
+    margin-top: 25px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #effff6,
+            #f4fff9
+        );
+
+    border: 1px solid #bdebd1;
+}
+
+
+.result-title {
+
+    color: #16833c;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+
+.price {
+
+    font-size: 42px;
+
+    font-weight: 800;
+
+    color: #138a3d;
+
+    margin: 10px 0;
+}
+
+
+.result p {
+
+    color: #667;
+
+    font-size: 14px;
+}
+
+
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+
+footer {
+
+    text-align: center;
+
+    color: #777;
+
+    font-size: 13px;
+
+    padding: 10px 0 30px;
+}
+
+
+/* ============================= */
+/* MOBILE */
+/* ============================= */
+
+@media (max-width: 700px) {
+
+    .hero {
+
+        height: 400px;
+    }
+
+
+    .hero-content {
+
+        text-align: center;
+    }
+
+
+    .hero-content h1 {
+
+        font-size: 38px;
+    }
+
+
+    .hero-content h2 {
+
+        font-size: 20px;
+    }
+
+
+    .hero-content p {
+
+        font-size: 15px;
+    }
+
+
+    .form-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .card {
+
+        padding: 22px;
+    }
+
+
+    .container {
+
+        margin-top: -50px;
+    }
+
+}
